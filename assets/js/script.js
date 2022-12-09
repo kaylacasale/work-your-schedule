@@ -8,7 +8,7 @@ var timeEl = document.createElement("p");
 timeEl.textContent = time;
 currentDayEl.append(timeEl);
 
-var hour = dayjs().format('h');
+var hour = dayjs().format('H');
 var hourEl = document.createElement("p");
 hourEl.textContent = hour;
 console.log(hour);
@@ -16,7 +16,7 @@ console.log(hour);
 // var hour2 = dayjs().hour().format('h')
 // console.log(hour2)
 
-var hourNow = dayjs().hour(12).format('hh A');
+var hourNow = dayjs().hour(24).format('hh A');
 console.log(hourNow);
 
 headerDiv = document.querySelector("header");
@@ -24,59 +24,63 @@ containerDiv = document.getElementById("addRows")
 
 
 
-if (hour = hour + 1) {
-    for (i = 1; i < 9; i++) {
-        var hourDiv = document.createElement("div");
-        rowHourAttr = dayjs().hour(i).format('h')
-        hourDiv.setAttribute("data-hour", rowHourAttr)
-        hourDiv.setAttribute("class", "row")
-        //hourDiv.textContent = i;
-        containerDiv.appendChild(hourDiv)
-        //hourDiv == rowDiv
-        var divInHourDiv = document.createElement("div");
-        divInHourDiv.setAttribute("class", "col-2 col-md-1 hour text-center py-3");
-        //divInHourDiv.textContent = i;
-        //set text 
-        divInHourDiv.textContent = dayjs().hour(i).format('h A');
-        hourDiv.appendChild(divInHourDiv);
+//if (hour === hour + 1) {
+for (i = 9; i < 17; i++) {
+    var hourDiv = document.createElement("div");
+    rowHourAttr = dayjs().hour(i).format('H')
+    hourDiv.setAttribute("data-hour", rowHourAttr)
+    hourDiv.setAttribute("class", "row")
+    //hourDiv.textContent = i;
+    containerDiv.appendChild(hourDiv)
+    //hourDiv == rowDiv
+    var divInHourDiv = document.createElement("div");
+    divInHourDiv.setAttribute("class", "col-2 col-md-1 hour text-center py-3");
+    //divInHourDiv.textContent = i;
+    //set text 
+    divInHourDiv.textContent = dayjs().hour(i).format('h A');
+    hourDiv.appendChild(divInHourDiv);
 
-        var textAreaNew = document.createElement("textarea");
-        textAreaNew.setAttribute("class", "col-8 col-md-10 description")
-        textAreaNew.setAttribute("rows", "3");
-        hourDiv.appendChild(textAreaNew);
+    var textAreaNew = document.createElement("textarea");
+    textAreaNew.setAttribute("class", "col-8 col-md-10 description")
+    textAreaNew.setAttribute("rows", "3");
+    textAreaNew.setAttribute("data-index", i);
+    hourDiv.appendChild(textAreaNew);
 
-        var buttonSave = document.createElement("button");
-        buttonSave.setAttribute("class", "btn saveBtn col-2 col-md-1");
-        buttonSave.setAttribute("aria-label", "save");
+    var buttonSave = document.createElement("button");
+    buttonSave.setAttribute("class", "btn saveBtn col-2 col-md-1");
+    buttonSave.setAttribute("aria-label", "save");
+    buttonSave.setAttribute("data-index", i)
 
-        var iClass = document.createElement("i");
-        iClass.setAttribute("class", "fas fa-save");
-        iClass.setAttribute("aria-hidden", "true");
-        buttonSave.appendChild(iClass);
-        hourDiv.appendChild(buttonSave);
-        //buttonSave.append(hourDiv)
+    var iClass = document.createElement("i");
+    iClass.setAttribute("class", "fas fa-save");
+    iClass.setAttribute("aria-hidden", "true");
+    buttonSave.appendChild(iClass);
+    hourDiv.appendChild(buttonSave);
+    //buttonSave.append(hourDiv)
 
 
 
-    }
+
+
+
+    var rows = $(".row");
+    console.log(rows)
+    rows.each(function () {
+        var rowHour = parseInt($(this).attr("data-hour"))
+        console.log(rowHour)
+        console.log(hour);
+        if (rowHour < hour) {
+            $(this).addClass("past")
+        }
+        if (rowHour == hour) {
+            $(this).addClass("present")
+        }
+        if (rowHour > hour) { //if rowHour > 10
+            $(this).addClass("future")
+        }
+    })
+
 }
-
-var rows = $(".row");
-console.log(rows)
-rows.each(function () {
-    var rowHour = $(this).attr("data-hour")
-    console.log(rowHour)
-
-    if (rowHour < hour) {
-        $(this).addClass("past")
-    } else if (rowHour == hour) {
-        $(this).addClass("present")
-    } else if (rowHour > hour) { //if rowHour > 10
-        $(this).addClass("future")
-    }
-})
-
-
 
 // var rows = $(".row");
 // console.log(rows)
@@ -137,20 +141,23 @@ var saveBtns = document.querySelector(".saveBtn")
 console.log(saveBtns);
 
 var textAreaEl = document.querySelector("textarea");
+for (i = 9; i < 17; i++) {
+    saveBtns.addEventListener('click', function () {
 
-saveBtns.addEventListener('click', function () {
-    //saveTextArea();
-    // var textAreas = textAreaEl;
-    textAreas = textAreaEl.value;
+        //saveTextArea();
+        // var textAreas = textAreaEl;
+        var textAreas = textAreaEl.value;
+        console.log(textAreas)
 
-    localStorage.setItem("textAreas", JSON.stringify(textAreas));
+        localStorage.setItem("textAreas", JSON.stringify(textAreas));
 
-    renderSavedTextArea();
+        //renderSavedTextArea();
 
 
 
-})
+    })
 
+}
 //* create variables to grab textArea
 
 
@@ -189,7 +196,7 @@ function displayTextArea(area) {
 
 function init() {
     renderSavedTextArea();
-    displayTextArea(textAreas);
+    displayTextArea();
 }
 
 $(function () {
