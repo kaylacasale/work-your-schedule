@@ -7,6 +7,11 @@ A simple calendar application that lets any user save events for each hour of th
 ## About
 Especially in times of unpredictability and technological growth, keeping track of your schedule is ever more important. Allow this personal, browser-based scheduler to help you think about what you want to achieve in a day, and keep you on track to accomplish these goals. Ensure that you have no unexpected problems and your day runs smoothly.
 
+## Installation
+**Link to My Workday Scheduler:** 
+
+**Link to my GitHub repository:** 
+
 ## User Story
 AS an employee with a busy schedule
 
@@ -42,7 +47,9 @@ THEN the saved events persist until I replace them with new events
 ## Frameworks & Libraries
 > Bootstrap
 
-> 
+> Day.js
+
+> jQuery UI
 
 ## Languages 
 - HTML
@@ -51,3 +58,5 @@ THEN the saved events persist until I replace them with new events
 
 - Javascript
 
+### Focus Points
+Web APIs | Data-Attributes | Local Storage (arrays, objects, array of objects) | Algorithms (for loops to create dynamic elements and store data) | jQuery Elements | Click Events | Form Elements | DOM Traversal | Event Delegation | Bootstrap Components | Bootstrap Layout | Bootstrap Utilities | DayJS Format 
