@@ -10,7 +10,7 @@ Especially in times of unpredictability and technological growth, keeping track 
 ## Installation
 **Link** to ***My Workday Scheduler:*** https://kaylacasale.github.io/work-your-schedule/
 
-**Link** to ***My GitHub repository:*** https://github.com/kaylacasale?tab=repositories 
+**Link** to ***My GitHub repository:*** https://github.com/kaylacasale/work-your-schedule 
 
 ## User Story
 AS an employee with a busy schedule
