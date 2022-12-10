@@ -1,4 +1,4 @@
-# Workday Scheduler
+# Workday Scheduler 🗓
 ### Work your schedule, ~~don't let it work you!~~
 
 ## _work-your-schedule_
@@ -8,7 +8,7 @@ A simple calendar application that lets any user save events for each hour of th
 Especially in times of unpredictability and technological growth, keeping track of your schedule is ever more important. Allow this personal, browser-based scheduler to help you think about what you want to achieve in a day, and keep you on track to accomplish these goals. Ensure that you have no unexpected problems and your day runs smoothly.
 
 ## Installation
-**Link** to ***My Workday Scheduler:*** 
+**Link** to ***My Workday Scheduler:*** https://kaylacasale.github.io/work-your-schedule/
 
 **Link** to ***My GitHub repository:*** https://github.com/kaylacasale?tab=repositories 
 
