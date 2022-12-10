@@ -9,6 +9,7 @@ $('#currentDay').text(today.format('MMM D, YYYY'));
 //** use dayjs format to get time in 'hour:minutes AM/PM' format for display in header div */
 var time = dayjs().format('h:mm A');
 var timeEl = document.createElement('p');
+timeEl.setAttribute('class', 'shadow p-3');
 timeEl.textContent = time;
 currentDayEl.append(timeEl);
 
@@ -29,7 +30,7 @@ for (i = 9; i < 17; i++) {
     var hourDiv = document.createElement('div');
     rowHourAttr = dayjs().hour(i).format('H');
     hourDiv.setAttribute('data-hour', rowHourAttr);
-    hourDiv.setAttribute('class', 'row');
+    hourDiv.setAttribute('class', 'shadow-lg row');
     containerDiv.appendChild(hourDiv);
 
     //* create a <div> element [nested grandchild of containerDiv and child of time-block after appending to each time-block div in same row] 
