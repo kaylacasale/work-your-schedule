@@ -58,5 +58,10 @@ THEN the saved events persist until I replace them with new events
 
 - Javascript
 
+## Mockup
+This mockup displays the appearance and functionality of the deployed web application.
+
+https://user-images.githubusercontent.com/115776118/208210604-75c40196-1b42-45dd-8681-41c19837e737.mov
+
 ### Focus Points
 Web APIs | Data-Attributes | Local Storage (arrays, objects, array of objects) | Algorithms (for loops to create dynamic elements and store data) | jQuery Elements | Click Events | Form Elements | DOM Traversal | Event Delegation | Bootstrap Components | Bootstrap Layout | Bootstrap Utilities | DayJS Format 
