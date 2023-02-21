@@ -86,20 +86,20 @@ for (i = 9; i < 17; i++) {
         }
     });
 }
+ade ==
+    //* when day changes, create a new row div
 
-//* when day changes, create a new row div
-
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
-//* get the value of textarea inputs by class and assign to variable 'value'
-//* get the data-index value of textarea inputs by class and assign to variable 'key'
-//* store value of 'key' and 'value' locally
-function seeLocalValue() {
-    let value = $(this).siblings('.description').val();
-    let key = $(this).siblings('.description').data('index');
-    localStorage.setItem(key, value);
-}
+    // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
+    // the code isn't run until the browser has finished rendering all the elements
+    // in the html.
+    //* get the value of textarea inputs by class and assign to variable 'value'
+    //* get the data-index value of textarea inputs by class and assign to variable 'key'
+    //* store value of 'key' and 'value' locally
+    function seeLocalValue() {
+        let value = $(this).siblings('.description').val();
+        let key = $(this).siblings('.description').data('index');
+        localStorage.setItem(key, value);
+    }
 
 //* create variables to grab textArea
 //* select all buttons by class and assign to variable 'saveBtns'
