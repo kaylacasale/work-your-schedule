@@ -5,15 +5,15 @@
 A simple calendar application that lets any user save events for each hour of the workday in their browser.
 
 ## Table of Contents
-*[About](#about)
-*[Installation](#installation)
-*[Deck](#deck)
-*[User Story](#user-story)
-*[Acceptance Criteria](#acceptance-criteria)
-*[Frameworks & Libraries](#frameworks--libraries)
-*[Languages](#languages)
-*[Mockup](#mockup)
-*[Focus Points](#focus-points)
+* [About](#about)
+* [Installation](#installation)
+* [Deck](#deck)
+* [User Story](#user-story)
+* [Acceptance Criteria](#acceptance-criteria)
+* [Frameworks & Libraries](#frameworks--libraries)
+* [Languages](#languages)
+* [Mockup](#mockup)
+* [Focus Points](#focus-points)
 
 ## About
 Especially in times of unpredictability and technological growth, keeping track of your schedule is ever more important. Allow this personal, browser-based scheduler to help you think about what you want to achieve in a day, and keep you on track to accomplish these goals. Ensure that you have no unexpected problems and your day runs smoothly.
